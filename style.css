@@ -1,0 +1,33 @@
+body {
+	background-image: url(putihbg.jpg);
+	font-family: helvecita;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+	border-right: 6px solid skyblue;
+	border-top: 6px solid skyblue;
+	border-left: 6px solid skyblue;
+	border-bottom: 6px solid skyblue;	
+}
+
+
+body h1{
+	background-color: skyblue;
+	float 			      	: center;
+	color 			      	: white;
+	padding 	      		: 10px 40px;
+	font-family: lato;
+
+}
+
+
+
+footer {
+	margin-top: 150px;
+	background-color: skyblue;
+	float 			      	: center;
+	color 			      	: #fff;
+
+	padding 	      		: 10px 40px;
+
+}

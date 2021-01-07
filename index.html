@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+ 	<title> Persamaan Kuadrat </title>
+</head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+		<script type="text/javascript" src="memanggilfire.js"></script>
+
+	<script type="text/javascript">
+  function data()
+  {
+    var a =document.getElementById('bil_a').value="";
+    var b =document.getElementById('bil_b').value="";
+    var c =document.getElementById('bil_c').value="";
+    var x1 =document.getElementById('x1').value="";
+    var x2 =document.getElementById('x2').value="";
+    var d =document.getElementById('hasil').value="";
+    var a =document.input.bil_a.focus();
+  }
+
+  function proses()
+  {
+    var a =document.getElementById('bil_a').value;
+    var b =document.getElementById('bil_b').value;
+    var c =document.getElementById('bil_c').value;
+   
+    d = parseInt(b*b) - (4 * a * c);
+    document.getElementById('hasil').value= d;
+
+    if (a=="")
+    {
+      alert("nilai a belum diisi(Please check)");
+      var a = document.input.bil_a.focus();
+
+      var d =document.getElementById('hasil').value="";
+      var x1 =document.getElementById('x1').value="";
+      var x2 =document.getElementById('x2').value="";
+    }
+
+    else if (b=="")
+    {
+      alert("nilai b belum diisi(Please check)");
+      var b = document.input.bil_b.focus();
+      var d =document.getElementById('hasil').value="";
+      var x1 =document.getElementById('x1').value="";
+      var x2 =document.getElementById('x2').value="";
+    }
+
+    else if (c=="")
+    {
+      alert("nilai c belum diisi(Please check)");
+      var c = document.input.bil_c.focus();
+      var d =document.getElementById('hasil').value="";
+      var x1 =document.getElementById('x1').value="";
+      var x2 =document.getElementById('x2').value="";
+    }
+
+    else if (a==0)
+    {
+      alert("Nilai a = "+a+" bukan persamaan kuadrat");
+      var x1 =document.getElementById('x1').value="";
+      var x2 =document.getElementById('x2').value="";
+      var d =document.getElementById('hasil').value="";
+      var a = document.input.bil_a.focus();
+      var a =document.getElementById('bil_a').value="";
+    }
+
+    else if (d>0)
+    {
+      var x1 =(-b + Math.sqrt(d))/(2*a);
+      var x2 =(-b - Math.sqrt(d))/(2*a);
+      document.getElementById('x1').value=x1;
+      document.getElementById('x2').value=x2;
+    }
+
+    else if (d==0)
+    {
+      var x1 =(-b - Math.sqrt(d))/(2*a);
+      document.getElementById('x1').value=x1;
+      document.getElementById('x2').value=x2;
+    }
+
+    else if (d<0)
+    {
+      alert("Nilai Determinant = "+d+" akar-akarnya imaginer");
+      document.getElementById('x1').value="";
+      document.getElementById('x2').value="";
+    }
+    else if(a,b,c=isNaN)
+    {
+      alert("Nilai input tidak valid(harus integer)");
+      var a =document.getElementById('bil_a').value="";
+      var b =document.getElementById('bil_b').value="";
+      var c =document.getElementById('bil_c').value="";
+      var d =document.getElementById('hasil').value="";
+      var x1 =document.getElementById('x1').value="";
+      var x2 =document.getElementById('x2').value="";
+      var a = document.input.bil_a.focus();
+    }
+  }
+</script>
+<body onload="input.bil_a.focus()">
+  
+    <h1> Menghitung Persamaan Kuadrat <br>Dengan Java Script </h1>
+
+   
+
+    <p> Fungsi kuadrat ax<sup>2</sup> + bx + c = 0;</p>
+ 
+    <form id=input name=input>
+      Nilai a: <input type=text id=bil_a size=8 placeholder="Enter number" ><br>
+      Nilai b: <input type=text id=bil_b size=8 placeholder="Enter number"><br>
+      Nilai c: <input type=text id=bil_c size=8
+  	  placeholder="Enter number"><br>
+    </form>
+    <input type=button id=proses value=Hitung onclick='proses();'><br><br>
+    Determinan : <input type=text id=hasil size=8><br>
+    x1   : <input type=text id=x1 size=8><br>
+    x2  : <input type=text id=x2 size=8><br>
+  
+
+
+
+   
+   	</body>
+
+
+    <footer> Annisa Apriliyanti 1810131120002 <br>
+   		Zailani 1810131110020 </footer>
+</html>
